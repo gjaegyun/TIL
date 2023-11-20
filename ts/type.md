@@ -16,7 +16,7 @@ let user : User = {
 
 대표적인 이유로는 일반적이게 object를 만들면 안에 있는 object들의 type을 지정되지 않았기 때문에 interface를 통해서 type을 지정시켜 준 후 써야한다.
 
-### ?
+### ?(optional parameter)
 
     user object에 쓰고 싶지 않고, 변수로써 쓰고 싶을때 써도 되고 안써도 되게 하는 문법이 있다.
 
