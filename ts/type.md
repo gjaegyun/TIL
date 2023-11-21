@@ -1,39 +1,24 @@
-## interface
+# type
 
-간단한 예제
+- type 키워드는 interface와는 다르게 새로운 타입이 아닌 별칭을 부여하는 것이다.
+- extends는 사용불가
+
+## type 별칭 선언 봐보기
+
 ``` ts
-interface User {
-    name : string;
-    age : number;
-}
+type StrOrNum = string | number;
 
-let user : User = {
-    name : 'gimjaegyun',
-    age : 17
-}
+const str1: StrOrNum = "kimjaegyun";
+const str2: StrOrNum = 1208;
 ```
-이런식으로 코드를 작성 해야 오류가 나지 않는다.
 
-대표적인 이유로는 일반적이게 object를 만들면 안에 있는 object들의 type을 지정되지 않았기 때문에 interface를 통해서 type을 지정시켜 준 후 써야한다.
+- 여기서 StrOrNum의 별칭을 string이나 number로 부여해줬다.
+- 그러므로 str: StrOfNum같은 경우에 string과 number type을 동시에 갖고 있다.
 
-### ?(optional parameter)
+## type과 interface
 
-    user object에 쓰고 싶지 않고, 변수로써 쓰고 싶을때 써도 되고 안써도 되게 하는 문법이 있다.
+- 가장 큰 차이점 **타입의 확장 가능 vs 불가능이다.**
 
-    ``` ts
-    interface User {
-        name? : string;
-    }
-    ```
+- interface는 확장이 가능하나 type은 확장이 불가능하다.
 
-    이런식으로 변수 뒤에 ?을 붙이면 써도 되고 안써도 된다.
-
-### readonly
-
-    ``` ts
-    interface User {
-        readonly name : string;
-    }
-    ```
-
-    이렇게 변수 앞에 readonly를 쓰면 선언과 object안에 쓸 수 있지만 변경을 할 수가 없다.
+- 이말이 뭐냐면 넓은 개념 좁은 개념으로 이해하면 안되고, interface는 type을 늘릴수 있는 것이라고 보면 편하다.

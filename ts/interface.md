@@ -7,6 +7,7 @@ interface User {
     name : string;
 }
 ```
+- 대표적인 이유로는 일반적이게 object를 만들면 안에 있는 object들의 type을 지정되지 않았기 때문에 interface를 통해서 type을 지정시켜 준 후 써야한다.
 
 ### interface로 만든 변수 활용해주기
 ``` ts
